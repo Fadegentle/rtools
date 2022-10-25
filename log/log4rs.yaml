@@ -1,0 +1,28 @@
+refresh_rate: 30 seconds
+
+appenders:
+  stdout:
+    kind: console
+    encoder:
+      pattern: "{d(%+)(utc)} [{f}:{L}] {h({l})} {M}:{m}{n}"
+
+  file:
+    kind: file
+    path: "log/rtools.log"
+    encoder:
+      pattern: "{d(%+)(utc)} [{f}:{L}] {h({l})} {M}:{m}{n}"
+
+root:
+  level: info
+  appenders:
+    - stdout
+
+loggers:
+  app::backend::db:
+    level: info
+
+  app::file:
+    level: info
+    appenders:
+      - file
+    additive: false

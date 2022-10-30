@@ -1,5 +1,5 @@
 ![Platform:macOS](https://img.shields.io/badge/platform-macOS-lightgreen)
-![github actions](https://github.com/Fadegentle/rtools/blob/main/.github/workflows/github-action-ci-rtools.yml/badge.svg)
+![github actions](https://github.com/Fadegentle/rtools/actions/workflows/github-action-ci-rtools.yml/badge.svg)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 
  [中文版](README.md) | **English Version**

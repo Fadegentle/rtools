@@ -11,7 +11,7 @@ A toolkit writing with Rust, e.g. WorkTimeCalculator.
 - language: Rust
 - tools: VS Code
 - platform:
-  - [ ] MacOS
+  - [x] MacOS
   - [ ] Windows
   - [ ] Linux
   - [ ] IOS

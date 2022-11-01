@@ -11,7 +11,7 @@
 - 语言: Rust
 - 工具: VS Code
 - 平台:
-  - [ ] MacOS
+  - [x] MacOS
   - [ ] Windows
   - [ ] Linux
   - [ ] IOS

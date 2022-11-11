@@ -1,0 +1,23 @@
+[package]
+name = "backend"
+version = "0.1.0"
+authors = ["fdc <fudongcheng110@foxmail.com>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4.17"
+log4rs = "1.2.0"
+lazy_static = "1.4.0"
+actix-web = "4.2.1"
+async-graphql = { version = "4.0.16", features = ["chrono"]}
+rbatis = "4.0.39"
+rbdc-mysql = "0.1.17"
+rbdc-pg = "0.1.19"
+async-graphql-actix-web = "4.0.16"
+actix-rt = "2.7.0"
+serde = {version ="1.0.147", features=["derive"]}
+dotenv = "0.15.0"
+rbdc = "0.1.22"
+rbs = "0.1.12"

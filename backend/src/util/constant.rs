@@ -1,8 +1,7 @@
-use dotenv::dotenv;
-use lazy_static::lazy_static;
 use std::collections::HashMap;
 
-pub type GqlResult<T> = std::result::Result<T, async_graphql::Error>;
+use dotenv::dotenv;
+use lazy_static::lazy_static;
 
 lazy_static! {
     // CFG variables defined in .env file

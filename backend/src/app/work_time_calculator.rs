@@ -1,5 +1,6 @@
-use super::{Tool, ToolBuilder, ToolFunc};
 use std::io;
+
+use super::{Tool, ToolBuilder, ToolFunc};
 
 pub(crate) struct WorkTimeCalculator(String);
 
@@ -39,7 +40,7 @@ fn parse_time(time: impl ToString) -> Option<(usize, usize)> {
     let t = time.to_string();
     let res: Vec<&str> = t.trim().split(':').collect();
     // TODO dont unwrap
-    if let Ok(h) = res.get(0).unwrap().parse::<usize>() {
+    if let Ok(h) = res.first().unwrap().parse::<usize>() {
         if let Ok(m) = res.get(1).unwrap().parse::<usize>() {
             return Some((h, m));
         }

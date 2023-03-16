@@ -1453,6 +1453,7 @@ dependencies = [
  "serde_yaml",
  "thiserror",
  "thread-id",
+ "toml",
  "typemap-ors",
  "winapi",
 ]

@@ -27,7 +27,7 @@ humantime-serde         = "1.0.1"
 jsonwebtoken            = "8.1.1"
 lazy_static             = "1.4.0"
 log                     = "0.4.17"
-log4rs                  = "1.2.0"
+log4rs                  = { version = "1.2.0", features = [ "toml_format" ] }
 regex                   = "1.5.3"
 rust-argon2             = "1.0.0"
 serde                   = { version = "1.0.147", features = [ "derive" ] }

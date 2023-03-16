@@ -9,7 +9,7 @@ use actix_web::{
     dev::Server,
     guard::{Get, Post},
     middleware::Logger,
-    web::{resource, ServiceConfig},
+    web::{resource, Data, ServiceConfig},
     App, HttpServer,
 };
 use anyhow::Context;
@@ -108,9 +108,9 @@ fn build_actix_server(
     let server = HttpServer::new(move || {
         App::new()
             .wrap(Logger::default())
-            .app_data(configs.clone())
-            .app_data(state.clone())
-            .app_data(schema.clone())
+            .app_data(Data::new(configs.clone()))
+            .app_data(Data::new(state.clone()))
+            .app_data(Data::new(schema.clone()))
             .configure(|cfg| register_service(cfg, configs.clone()))
     })
     .bind(address)

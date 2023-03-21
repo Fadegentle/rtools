@@ -1,8 +1,21 @@
 [package]
-name = "frontend-handlebars"
-version = "0.1.0"
+authors = [ "fdc <fudongcheng110@foxmail.com>" ]
 edition = "2021"
+name    = "frontend-handlebars"
+version = "0.1.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+async-std      = { version = "1.12.0", features = [ "attributes" ] }
+dotenv         = "0.15.0"
+graphql_client = "0.12.0"
+handlebars     = { version = "4.3.6", features = [ "script_helper" ] }
+lazy_static    = "1.4.0"
+serde          = { version = "1.0.158", features = [ "derive" ] }
+serde_json     = "1.0.94"
+surf           = "2.3.2"
+tide           = "0.16.0"
+
+[dev-dependencies]
+rhai = "1.13.0"

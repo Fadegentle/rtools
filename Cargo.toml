@@ -1,9 +1,5 @@
 [workspace]
-members = [
-    "./backend",
-    "./frontend-handlebars",
-    "./frontend-wasm",
-]
+members = [ "./backend", "./frontend-handlebars", "./frontend-yew" ]
 
 [profile.dev]
 split-debuginfo = "unpacked"

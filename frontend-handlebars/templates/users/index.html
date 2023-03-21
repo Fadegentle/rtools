@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>all users</title>
+
+    <link rel="icon" href="/static/favicon.ico">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+  </head>
+
+  <body>
+    <a href="/"><strong>frontend-handlebars / tide-async-graphql-mongodb</strong></a>
+    <h1>all users</h1>
+
+    <ul>
+      {{#each allUsers as |u|}}
+        <li><b>{{u.username}} - (length: {{length u.username}})</b></li>
+        <ul>
+          <li>{{ u.id }}</li>
+          <li>{{ u.email }}</li>
+        </ul>
+      {{/each}}
+    </ul>
+
+  </body>
+
+</html>

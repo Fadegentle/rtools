@@ -122,3 +122,34 @@
 2023-03-16 16:11:40 +08:00  INFO 83221 [              main]                     backend: 🎉Started Application in Duration { seconds: 0, nanoseconds: 142122500 }
 2023-03-16 16:11:40 +08:00  INFO 83221 [              main]        actix_server::server: Actix runtime found; starting in Actix runtime
 2023-03-16 16:11:53 +08:00  INFO 83221 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query { findByUsername(username: "Bob") { id } }
+2023-03-21 15:38:30 +08:00  INFO 68695 [              main]            backend::configs: 初始化 '配置文件 日志' 完成!
+2023-03-21 15:38:30 +08:00  INFO 68695 [              main]                     backend: 初始化 '静态常量' 完成
+2023-03-21 15:38:30 +08:00  INFO 68695 [              main]            backend::configs: 初始化 '数据库' 完成
+2023-03-21 15:38:30 +08:00  INFO 68695 [              main]            backend::configs: 初始化 '加密服务:[backend::security::crypto::CryptoService]' 完成!
+2023-03-21 15:38:30 +08:00  INFO 68695 [              main]                     backend: 初始化 'GraphQL Schema' 完成! 
+2023-03-21 15:38:30 +08:00  INFO 68695 [              main]                     backend: 🚀GraphQL UI: http://127.0.0.1:8080/graphiql
+2023-03-21 15:38:30 +08:00  INFO 68695 [              main]       actix_server::builder: Starting 10 workers
+2023-03-21 15:38:30 +08:00  INFO 68695 [              main]                     backend: 🎉Started Application in Duration { seconds: 0, nanoseconds: 55034875 }
+2023-03-21 15:38:30 +08:00  INFO 68695 [              main]        actix_server::server: Actix runtime found; starting in Actix runtime
+2023-03-21 15:38:56 +08:00  INFO 68695 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query { findByUsername(username: "Bob") { id } }
+2023-03-21 15:42:21 +08:00  INFO 68695 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query { findByEmail(email: "xx@qq.com") { id } }
+2023-03-21 15:42:21 +08:00 DEBUG 68695 [actix-rt|system:0|]                 sqlx::query: SELECT * FROM users …; rows affected: 0, rows returned: 0, elapsed: 37.384ms
+
+SELECT
+  *
+FROM
+  users
+WHERE
+  email = $1
+
+2023-03-21 15:44:38 +08:00  INFO 68695 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query { findByEmail(email: "xx@qq.com") { id } getAllUsers { id } }
+2023-03-21 15:44:39 +08:00 DEBUG 68695 [actix-rt|system:0|]                 sqlx::query: SELECT * FROM users …; rows affected: 0, rows returned: 0, elapsed: 436.583µs
+
+SELECT
+  *
+FROM
+  users
+WHERE
+  email = $1
+
+2023-03-21 15:44:39 +08:00 DEBUG 68695 [actix-rt|system:0|]                 sqlx::query: SELECT * FROM users; rows affected: 0, rows returned: 0, elapsed: 1.251ms

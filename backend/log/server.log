@@ -153,3 +153,32 @@ WHERE
   email = $1
 
 2023-03-21 15:44:39 +08:00 DEBUG 68695 [actix-rt|system:0|]                 sqlx::query: SELECT * FROM users; rows affected: 0, rows returned: 0, elapsed: 1.251ms
+2023-03-21 16:56:35 +08:00  INFO 68695 [              main]        actix_server::server: SIGTERM received; starting graceful shutdown
+2023-03-21 16:56:35 +08:00  INFO 68695 [actix-rt|system:0|]        actix_server::worker: Shutting down idle worker
+2023-03-21 16:56:35 +08:00  INFO 68695 [actix-rt|system:0|]        actix_server::worker: Shutting down idle worker
+2023-03-21 16:56:35 +08:00  INFO 68695 [actix-rt|system:0|]        actix_server::worker: Shutting down idle worker
+2023-03-21 16:56:35 +08:00  INFO 68695 [actix-rt|system:0|]        actix_server::worker: Shutting down idle worker
+2023-03-21 16:56:35 +08:00  INFO 68695 [actix-rt|system:0|]        actix_server::worker: Shutting down idle worker
+2023-03-21 16:56:35 +08:00  INFO 68695 [actix-rt|system:0|]        actix_server::worker: Shutting down idle worker
+2023-03-21 16:57:07 +08:00  INFO 91643 [              main]            backend::configs: 初始化 '配置文件 日志' 完成!
+2023-03-21 16:57:07 +08:00  INFO 91643 [              main]                     backend: 初始化 '静态常量' 完成
+2023-03-21 16:57:07 +08:00  INFO 91643 [              main]            backend::configs: 初始化 '数据库' 完成
+2023-03-21 16:57:07 +08:00  INFO 91643 [              main]            backend::configs: 初始化 '加密服务:[backend::security::crypto::CryptoService]' 完成!
+2023-03-21 16:57:07 +08:00  INFO 91643 [              main]                     backend: 初始化 'GraphQL Schema' 完成! 
+2023-03-21 16:57:07 +08:00  INFO 91643 [              main]                     backend: 🚀GraphQL UI: http://127.0.0.1:8080/graphiql
+2023-03-21 16:57:07 +08:00  INFO 91643 [              main]       actix_server::builder: starting 10 workers
+2023-03-21 16:57:07 +08:00  INFO 91643 [              main]                     backend: 🎉Started Application in Duration { seconds: 0, nanoseconds: 97761625 }
+2023-03-21 16:57:07 +08:00  INFO 91643 [              main]        actix_server::server: Actix runtime found; starting in Actix runtime
+2023-03-21 17:01:23 +08:00  INFO 91643 [              main]        actix_server::server: SIGINT received; starting forced shutdown
+2023-03-21 17:01:23 +08:00  INFO 91643 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-21 17:01:23 +08:00 DEBUG 91643 [actix-server accep]        actix_server::accept: paused accepting connections on 127.0.0.1:8080
+2023-03-21 17:01:23 +08:00  INFO 91643 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-21 17:01:23 +08:00  INFO 91643 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-21 17:01:23 +08:00  INFO 91643 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-21 17:01:23 +08:00  INFO 91643 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-21 17:01:23 +08:00  INFO 91643 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-21 17:01:23 +08:00  INFO 91643 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-21 17:01:23 +08:00  INFO 91643 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-21 17:01:23 +08:00  INFO 91643 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-21 17:01:23 +08:00  INFO 91643 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-21 17:01:23 +08:00  INFO 91643 [actix-server accep]        actix_server::accept: accept thread stopped

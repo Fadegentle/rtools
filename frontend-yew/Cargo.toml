@@ -1,8 +1,26 @@
 [package]
-edition = "2021"
+authors = [ "fdc <fudongcheng110@foxmail.com>" ]
+edition = "2018"
 name    = "frontend-yew"
 version = "0.1.0"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+console_error_panic_hook = "0.1.7"
+wasm-bindgen             = "0.2.84"
+wasm-bindgen-futures     = "0.4.34"
+wee_alloc                = "0.4.5"
+
+yew        = { version = "0.20.0", features = [ "csr" ] }
+yew-router = "0.17.0"
+
+anyhow         = "1.0.70"
+graphql_client = "0.12.0"
+serde          = { version = "1.0.158", features = [ "derive" ] }
+serde_json     = "1.0.94"
+
+gloo-net    = { version = "0.2.6", features = [ "http", "json" ] }
+http        = "0.2.9"
+lazy_static = "1.4.0"
+toml        = "0.7.3"
+web-sys     = "0.3.61"
+futures = "0.3.27"

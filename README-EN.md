@@ -11,7 +11,7 @@ A toolkit writing with Rust, e.g. WorkTimeCalculator.
 - language: Rust
 - tools: VS Code
 - platform:
-  - [x] MacOS
+  - [x] MacOS (M1 Max)
   - [ ] Windows
   - [ ] Linux
   - [ ] IOS
@@ -24,11 +24,14 @@ A toolkit writing with Rust, e.g. WorkTimeCalculator.
 1. WorkTimeCalculator: calculate when you can out work
 
 # Usage
-Run the following code in root of this project:
-```bash
-cargo run
-```
+Run `run.sh` file in root of this project
+
 
 # Contact
 - E-mail: fudongcheng110@foxmail.com
 - WeChat: Fdc1104647683
+
+# References
+1. https://github.com/zzy/actix-web-async-graphql-rbatis
+2. https://github.com/zzy/tide-async-graphql-mongodb
+3. https://github.com/pauljohn21/actix-web-async-graphql-sqlx

@@ -11,7 +11,7 @@
 - 语言: Rust
 - 工具: VS Code
 - 平台:
-  - [x] MacOS
+  - [x] MacOS (M1 Max)
   - [ ] Windows
   - [ ] Linux
   - [ ] IOS
@@ -24,11 +24,13 @@
 1. 工时计算器（WorkTimeCalculator）: 计算何时下班
 
 # 用法
-在项目根目录运行以下代码：
-```bash
-cargo run
-```
+在项目根目录运行 `run.sh` 文件
 
 # 联系
 - 邮件: fudongcheng110@foxmail.com
 - 微信: Fdc1104647683
+
+# 参考
+1. https://github.com/zzy/actix-web-async-graphql-rbatis
+2. https://github.com/zzy/tide-async-graphql-mongodb
+3. https://github.com/pauljohn21/actix-web-async-graphql-sqlx

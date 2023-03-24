@@ -10,10 +10,6 @@ use yew::{html, Component, Context, Html};
 
 use crate::util::{common::gql_uri, constant::ObjectId};
 
-/////////////////////////////////////////
-// Fetch users data use `yew::web_sys` //
-/////////////////////////////////////////
-
 #[derive(Debug, Clone, PartialEq)]
 pub struct FetchError {
     err: JsValue,
@@ -100,7 +96,7 @@ impl Component for Users {
 }
 
 async fn fetch_users() -> Vec<Value> {
-    let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6ImFzZmZhQGRzYWZhLmNvbSIsInVzZXJuYW1lIjoi5a-G56CBMTExIiwiZXhwIjoxMDAwMDAwMDAwMH0.NyEN13J5trkn9OlRqWv2xMHshysR9QPWclo_-q1cbF4y_9rbkpSI6ern-GgKIh_ED0Czk98M1fJ6tzLczbdptg";
+    let token = "dLmqXwfi6hX3qqaHwadM5SD6VK9FRCdp";
     let build_query = AllUsers::build_query(all_users::Variables { token: token.to_string() });
     let query = serde_json::json!(build_query);
 

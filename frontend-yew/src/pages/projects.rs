@@ -32,58 +32,6 @@ pub struct Projects {
     error: Option<String>,
 }
 
-impl Projects {
-    fn view_fetching(&self) -> Html {
-        html! { <p></p> }
-    }
-
-    fn view_data(&self) -> Html {
-        match self.list {
-            Some(ref list) => {
-                let projects = list.iter().map(|project| {
-                    html! {
-                        <div>
-                            <li>
-                                <strong>{ &project["subject"].as_str().unwrap() }</strong>
-                            </li>
-                            <ul>
-                                <li>{ &project["userId"].as_str().unwrap() }</li>
-                                <li>{ &project["id"].as_str().unwrap() }</li>
-                                <li>
-                                    <a href={ project["website"].as_str().unwrap().to_owned() }>
-                                        { &project["website"].as_str().unwrap() }
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    }
-                });
-
-                html! {
-                    <ul>
-                        { for projects }
-                    </ul>
-                }
-            },
-            None => {
-                html! {
-                     <p>
-                        { "No data." }
-                     </p>
-                }
-            },
-        }
-    }
-
-    fn view_error(&self) -> Html {
-        if let Some(ref error) = self.error {
-            html! { <p>{ error.clone() }</p> }
-        } else {
-            html! {}
-        }
-    }
-}
-
 impl Component for Projects {
     type Message = Msg;
     type Properties = ();
@@ -143,4 +91,56 @@ async fn fetch_projects() -> Vec<Value> {
     let response = request.send().await.expect("Could not send request.");
     let projects_value = Value::from(response.text().await.expect("Could not get response text."));
     projects_value["data"]["allProjects"].as_array().unwrap().to_owned()
+}
+
+impl Projects {
+    fn view_fetching(&self) -> Html {
+        html! { <p></p> }
+    }
+
+    fn view_data(&self) -> Html {
+        match self.list {
+            Some(ref list) => {
+                let projects = list.iter().map(|project| {
+                    html! {
+                        <div>
+                            <li>
+                                <strong>{ &project["subject"].as_str().unwrap() }</strong>
+                            </li>
+                            <ul>
+                                <li>{ &project["userId"].as_str().unwrap() }</li>
+                                <li>{ &project["id"].as_str().unwrap() }</li>
+                                <li>
+                                    <a href={ project["website"].as_str().unwrap().to_owned() }>
+                                        { &project["website"].as_str().unwrap() }
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    }
+                });
+
+                html! {
+                    <ul>
+                        { for projects }
+                    </ul>
+                }
+            },
+            None => {
+                html! {
+                     <p>
+                        { "No data." }
+                     </p>
+                }
+            },
+        }
+    }
+
+    fn view_error(&self) -> Html {
+        if let Some(ref error) = self.error {
+            html! { <p>{ error.clone() }</p> }
+        } else {
+            html! {}
+        }
+    }
 }

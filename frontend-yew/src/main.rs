@@ -55,22 +55,22 @@ impl Component for App {
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
         html! {
-            <>
+            <BrowserRouter>
             <div class="logo-title">
                 <img src="imgs/budshome.png" />
-                <strong>{ "frontend-yew / tide-async-graphql-mongodb" }</strong>
+                <strong>{ "frontend-yew" }</strong>
             </div>
             <div class="nav">
-                <Link<Route> to={Route::Users}>{ "用户列表" }</Link<Route>>
+                <Link<Route> classes={classes!("nav-item")} to={Route::Home}>{ "主页" }</Link<Route>>
                 <span class="placeholder">{ " - " }</span>
-                <Link<Route> to={Route::Projects}>{ "项目列表" }</Link<Route>>
+                <Link<Route> classes={classes!("nav-item")} to={Route::Users}>{ "用户列表" }</Link<Route>>
                 <span class="placeholder">{ " - " }</span>
-                <Link<Route> to={Route::Home}>{ "主页" }</Link<Route>>
+                <Link<Route> classes={classes!("nav-item")} to={Route::Projects}>{ "项目列表" }</Link<Route>>
             </div>
             <main>
                 <Switch<Route> render={switch} />
             </main>
-            </>
+            </BrowserRouter>
         }
     }
 }

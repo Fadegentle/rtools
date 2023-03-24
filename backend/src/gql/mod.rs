@@ -4,11 +4,11 @@ use actix_web::{web, HttpResponse, Responder, Result};
 use async_graphql::{
     extensions::{ApolloTracing, Logger},
     http::{playground_source, GraphQLPlaygroundConfig},
-    EmptyMutation, EmptySubscription, Schema,
+    EmptySubscription, Schema,
 };
 use async_graphql_actix_web::{GraphQLRequest, GraphQLResponse};
 
-use self::queries::QueryRoot;
+use self::{mutations::MutationRoot, queries::QueryRoot};
 use crate::{
     configs::{Configs, GraphQlConfig},
     State,
@@ -18,11 +18,11 @@ pub mod mutations;
 pub mod queries;
 
 pub type GqlResult<T> = std::result::Result<T, async_graphql::Error>;
-pub type ServiceSchema = Schema<QueryRoot, EmptyMutation, EmptySubscription>;
+pub type ServiceSchema = Schema<QueryRoot, MutationRoot, EmptySubscription>;
 
 pub async fn build_schema(state: Arc<State>, config: &GraphQlConfig) -> ServiceSchema {
     let builder =
-        Schema::build(QueryRoot, EmptyMutation, EmptySubscription).data(state).extension(Logger);
+        Schema::build(QueryRoot, MutationRoot, EmptySubscription).data(state).extension(Logger);
     if config.tracing.unwrap_or_default() {
         builder.extension(ApolloTracing).finish()
     } else {

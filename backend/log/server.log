@@ -182,3 +182,103 @@ WHERE
 2023-03-21 17:01:23 +08:00  INFO 91643 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
 2023-03-21 17:01:23 +08:00  INFO 91643 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
 2023-03-21 17:01:23 +08:00  INFO 91643 [actix-server accep]        actix_server::accept: accept thread stopped
+2023-03-24 09:47:11 +08:00  INFO 48304 [              main]            backend::configs: 初始化 '配置文件 日志' 完成!
+2023-03-24 09:47:11 +08:00  INFO 48304 [              main]                     backend: 初始化 '静态常量' 完成
+2023-03-24 09:47:12 +08:00  INFO 48304 [              main]            backend::configs: 初始化 '数据库' 完成
+2023-03-24 09:47:12 +08:00  INFO 48304 [              main]            backend::configs: 初始化 '加密服务:[backend::security::crypto::CryptoService]' 完成!
+2023-03-24 09:47:12 +08:00  INFO 48304 [              main]                     backend: 初始化 'GraphQL Schema' 完成! 
+2023-03-24 09:47:12 +08:00  INFO 48304 [              main]                     backend: 🚀GraphQL UI: http://127.0.0.1:8080/graphiql
+2023-03-24 09:47:12 +08:00  INFO 48304 [              main]       actix_server::builder: starting 10 workers
+2023-03-24 09:47:12 +08:00  INFO 48304 [              main]                     backend: 🎉Started Application in Duration { seconds: 0, nanoseconds: 531610334 }
+2023-03-24 09:47:12 +08:00  INFO 48304 [              main]        actix_server::server: Actix runtime found; starting in Actix runtime
+2023-03-24 10:28:34 +08:00  INFO 48304 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query { findByEmail(email: "xx@qq.com") { id } getAllUsers { id } }
+2023-03-24 10:28:34 +08:00 DEBUG 48304 [actix-rt|system:0|]                 sqlx::query: SELECT * FROM users …; rows affected: 0, rows returned: 0, elapsed: 2.322ms
+
+SELECT
+  *
+FROM
+  users
+WHERE
+  email = $1
+
+2023-03-24 10:28:34 +08:00 DEBUG 48304 [actix-rt|system:0|]                 sqlx::query: SELECT * FROM users; rows affected: 0, rows returned: 0, elapsed: 13.646ms
+2023-03-24 16:01:46 +08:00  INFO 48304 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query AllUsers($token: String!) { allUsers(token: "dLmqXwfi6hX3qqaHwadM5SD6VK9FRCdp") { id email username } }
+2023-03-24 16:01:47 +08:00  INFO 48304 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query AllProjects { allProjects { id userId subject website } }
+2023-03-24 16:01:49 +08:00  INFO 48304 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query AllUsers($token: String!) { allUsers(token: "dLmqXwfi6hX3qqaHwadM5SD6VK9FRCdp") { id email username } }
+2023-03-24 16:03:32 +08:00  INFO 48304 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query AllProjects { allProjects { id userId subject website } }
+2023-03-24 16:03:36 +08:00  INFO 48304 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query AllUsers($token: String!) { allUsers(token: "dLmqXwfi6hX3qqaHwadM5SD6VK9FRCdp") { id email username } }
+2023-03-24 16:05:05 +08:00  INFO 48304 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query AllUsers($token: String!) { allUsers(token: "dLmqXwfi6hX3qqaHwadM5SD6VK9FRCdp") { id email username } }
+2023-03-24 16:05:09 +08:00  INFO 48304 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query AllUsers($token: String!) { allUsers(token: "dLmqXwfi6hX3qqaHwadM5SD6VK9FRCdp") { id email username } }
+2023-03-24 16:05:10 +08:00  INFO 48304 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query AllUsers($token: String!) { allUsers(token: "dLmqXwfi6hX3qqaHwadM5SD6VK9FRCdp") { id email username } }
+2023-03-24 16:05:21 +08:00  INFO 48304 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query AllUsers($token: String!) { allUsers(token: "dLmqXwfi6hX3qqaHwadM5SD6VK9FRCdp") { id email username } }
+2023-03-24 16:06:37 +08:00  INFO 48304 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query AllProjects { allProjects { id userId subject website } }
+2023-03-24 16:11:51 +08:00  INFO 48304 [              main]        actix_server::server: SIGINT received; starting forced shutdown
+2023-03-24 16:11:51 +08:00 DEBUG 48304 [actix-server accep]        actix_server::accept: paused accepting connections on 127.0.0.1:8080
+2023-03-24 16:11:51 +08:00  INFO 48304 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-24 16:11:51 +08:00  INFO 48304 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-24 16:11:51 +08:00  INFO 48304 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-24 16:11:51 +08:00  INFO 48304 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-24 16:11:51 +08:00  INFO 48304 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-24 16:11:51 +08:00  INFO 48304 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-24 16:11:51 +08:00  INFO 48304 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-24 16:11:51 +08:00  INFO 48304 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-24 16:11:51 +08:00  INFO 48304 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-24 16:11:51 +08:00  INFO 48304 [actix-rt|system:0|]        actix_server::worker: shutting down idle worker
+2023-03-24 16:11:51 +08:00  INFO 48304 [actix-server accep]        actix_server::accept: accept thread stopped
+2023-03-24 16:12:02 +08:00  INFO 82158 [              main]            backend::configs: 初始化 '配置文件 日志' 完成!
+2023-03-24 16:12:02 +08:00  INFO 82158 [              main]                     backend: 初始化 '静态常量' 完成
+2023-03-24 16:12:02 +08:00  INFO 82158 [              main]            backend::configs: 初始化 '数据库' 完成
+2023-03-24 16:12:02 +08:00  INFO 82158 [              main]            backend::configs: 初始化 '加密服务:[backend::security::crypto::CryptoService]' 完成!
+2023-03-24 16:12:02 +08:00  INFO 82158 [              main]                     backend: 初始化 'GraphQL Schema' 完成! 
+2023-03-24 16:12:02 +08:00  INFO 82158 [              main]                     backend: 🚀GraphQL UI: http://127.0.0.1:8080/graphiql
+2023-03-24 16:12:02 +08:00  INFO 82158 [              main]       actix_server::builder: starting 10 workers
+2023-03-24 16:12:02 +08:00  INFO 82158 [              main]                     backend: 🎉Started Application in Duration { seconds: 0, nanoseconds: 21043417 }
+2023-03-24 16:12:02 +08:00  INFO 82158 [              main]        actix_server::server: Actix runtime found; starting in Actix runtime
+2023-03-24 16:31:21 +08:00  INFO 82158 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query { getAllUsers { id } }
+2023-03-24 16:31:21 +08:00 DEBUG 82158 [actix-rt|system:0|]                 sqlx::query: SELECT * FROM users; rows affected: 0, rows returned: 0, elapsed: 12.062ms
+2023-03-24 16:34:01 +08:00  INFO 82158 [actix-rt|system:0|] async_graphql::extensions::: [Execute] mutation { newUser { username:Martin email:xx password:mima nickname:nick } }
+2023-03-24 16:44:11 +08:00  INFO 82158 [actix-rt|system:0|] async_graphql::extensions::: [Execute] mutation { newUser(new_user: {username: "Martin",email: "xx@qq.com",password: "mima",nickname: "nick"}) }
+2023-03-24 16:44:20 +08:00  INFO 82158 [actix-rt|system:0|] async_graphql::extensions::: [Execute] mutation { newUser(newUser: {username: "Martin", email: "xx@qq.com", password: "mima", nickname: "nick"}) }
+2023-03-24 16:45:12 +08:00  INFO 82158 [actix-rt|system:0|] async_graphql::extensions::: [Execute] mutation { newUser(newUser: {username: "Martin", email: "xx@qq.com", password: "mima", nickname: "nick"}) { username email password nickname } }
+2023-03-24 16:45:50 +08:00  INFO 82158 [actix-rt|system:0|] async_graphql::extensions::: [Execute] mutation { newUser(newUser: {username: "Martin", email: "xx@qq.com", password: "mima", nickname: "nick"}) { username nickname id email } }
+2023-03-24 16:45:50 +08:00  WARN 82158 [actix-rt|system:0|]      backend::common::error: ValidationErrors({"password": Field([ValidationError { code: "length", message: Some("密码不符合"), params: {"value": String("mima"), "min": Number(6)} }])})
+2023-03-24 16:45:50 +08:00  INFO 82158 [actix-rt|system:0|] async_graphql::extensions::: [Error] path=newUser message=请求参数错误
+2023-03-24 16:46:18 +08:00  INFO 82158 [actix-rt|system:0|] async_graphql::extensions::: [Execute] mutation { newUser(newUser: {username: "Martin", email: "xx@qq.com", password: "minimum", nickname: "nick"}) { username nickname id email } }
+2023-03-24 16:46:18 +08:00 DEBUG 82158 [actix-rt|system:0|]                 sqlx::query: SELECT EXISTS(SELECT 1 FROM …; rows affected: 0, rows returned: 1, elapsed: 2.021ms
+
+SELECT
+  EXISTS(
+    SELECT
+      1
+    FROM
+      users
+    WHERE
+      username = $1
+  )
+
+2023-03-24 16:46:18 +08:00 DEBUG 82158 [actix-rt|system:0|]                 sqlx::query: SELECT EXISTS(SELECT 1 FROM …; rows affected: 0, rows returned: 1, elapsed: 3.141ms
+
+SELECT
+  EXISTS(
+    SELECT
+      1
+    FROM
+      users
+    WHERE
+      email = $1
+  )
+
+2023-03-24 16:46:18 +08:00 DEBUG 82158 [actix-rt|system:0|]                 sqlx::query: INSERT INTO users(username, nickname, …; rows affected: 0, rows returned: 1, elapsed: 23.265ms
+
+INSERT INTO
+  users(username, nickname, email, password_hash)
+VALUES
+  ($1, $2, $3, $4) RETURNING *
+
+2023-03-24 17:32:10 +08:00  INFO 82158 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query { getAllUsers { id } }
+2023-03-24 17:32:10 +08:00 DEBUG 82158 [actix-rt|system:0|]                 sqlx::query: SELECT * FROM users; rows affected: 1, rows returned: 1, elapsed: 1.317ms
+2023-03-24 17:32:31 +08:00  INFO 82158 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query { getAllUsers { username nickname id } }
+2023-03-24 17:32:31 +08:00 DEBUG 82158 [actix-rt|system:0|]                 sqlx::query: SELECT * FROM users; rows affected: 1, rows returned: 1, elapsed: 448.334µs
+2023-03-24 17:32:57 +08:00  INFO 82158 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query AllUsers($token: String!) { allUsers(token: "dLmqXwfi6hX3qqaHwadM5SD6VK9FRCdp") { id email username } }
+2023-03-24 17:32:58 +08:00  INFO 82158 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query AllProjects { allProjects { id userId subject website } }
+2023-03-24 17:32:59 +08:00  INFO 82158 [actix-rt|system:0|] async_graphql::extensions::: [Execute] query AllUsers($token: String!) { allUsers(token: "dLmqXwfi6hX3qqaHwadM5SD6VK9FRCdp") { id email username } }
